@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="2BleA — Aaron Gonzalez, desarrollador full-stack. Diseño y construyo productos digitales cuidados. Proyectos, experiencia y contacto." />
+    <meta name="theme-color" content="#0a0b0e" />
+    <title>2BleA — Aaron Gonzalez · Desarrollador Full-Stack</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230b0d10'/%3E%3Ctext x='50' y='66' text-anchor='middle' font-family='Inter,sans-serif' font-size='44' font-weight='700' fill='%23a78bfa'%3E2B%3C/text%3E%3C/svg%3E" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-mark">
+        <span>2</span>
+        <span>B</span>
+      </div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+
+    <!-- Background decoration -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+    <div class="bg-noise" aria-hidden="true"></div>
+
+    <!-- Custom cursor (desktop only) -->
+    <div class="cursor" id="cursor" aria-hidden="true">
+      <div class="cursor-dot"></div>
+      <div class="cursor-ring"></div>
+    </div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <header class="navbar" id="navbar">
+      <div class="container nav-inner">
+        <a href="#inicio" class="logo" data-cursor="hover">
+          <span class="logo-mark">2B</span>
+          <span class="logo-text">2BleA<span class="logo-dot">.</span></span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#inicio" class="nav-link" data-cursor="hover"><span class="nav-num">01</span> Inicio</a>
+          <a href="#sobre-mi" class="nav-link" data-cursor="hover"><span class="nav-num">02</span> Sobre mí</a>
+          <a href="#servicios" class="nav-link" data-cursor="hover"><span class="nav-num">03</span> Servicios</a>
+          <a href="#experiencia" class="nav-link" data-cursor="hover"><span class="nav-num">04</span> Experiencia</a>
+          <a href="#proyectos" class="nav-link" data-cursor="hover"><span class="nav-num">05</span> Proyectos</a>
+          <a href="#testimonios" class="nav-link" data-cursor="hover"><span class="nav-num">06</span> Testimonios</a>
+          <a href="#contacto" class="nav-link nav-link-cta" data-cursor="hover">Contacto</a>
+        </nav>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" data-cursor="hover">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="inicio" class="hero">
+        <div class="container hero-inner">
+          <p class="eyebrow reveal">
+            <span class="dot"></span> Disponible para nuevos proyectos · 2026
+          </p>
+
+          <h1 class="hero-title">
+            <span class="line"><span class="line-inner">Hola, soy <em class="serif">Aaron</em></span></span>
+            <span class="line"><span class="line-inner"><span class="accent">Gonzalez</span>, desarrollador</span></span>
+            <span class="line"><span class="line-inner">de productos <em class="serif">digitales</em>.</span></span>
+          </h1>
+
+          <p class="hero-subtitle reveal">
+            Diseño y construyo experiencias web cuidadas, rápidas y mantenibles.
+            Más de seis años trabajando con startups, agencias y equipos de
+            producto en Latinoamérica y Europa.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a href="#proyectos" class="btn btn-primary" data-cursor="hover">
+              <span>Ver mi trabajo</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#contacto" class="btn btn-ghost" data-cursor="hover">
+              <span>Empezar un proyecto</span>
+            </a>
+          </div>
+
+          <div class="hero-meta reveal">
+            <div class="meta-item">
+              <span class="meta-num" data-count="6">0</span><span class="meta-plus">+</span>
+              <span class="meta-label">años de experiencia</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-num" data-count="40">0</span><span class="meta-plus">+</span>
+              <span class="meta-label">proyectos enviados</span>
+            </div>
+            <div class="meta-divider"></div>
+            <div class="meta-item">
+              <span class="meta-num" data-count="18">0</span>
+              <span class="meta-label">clientes felices</span>
+            </div>
+          </div>
+
+          <a href="#sobre-mi" class="scroll-hint" aria-label="Desplazar hacia abajo" data-cursor="hover">
+            <span>Scroll</span>
+            <span class="scroll-line"></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- MARQUEE / TICKER -->
+      <section class="marquee" aria-label="Tecnologías" id="marquee">
+        <div class="marquee-track" id="marqueeTrack">
+          <span>TypeScript</span><span aria-hidden="true">·</span>
+          <span>React</span><span aria-hidden="true">·</span>
+          <span>Next.js</span><span aria-hidden="true">·</span>
+          <span>Node.js</span><span aria-hidden="true">·</span>
+          <span>PostgreSQL</span><span aria-hidden="true">·</span>
+          <span>Diseño de Producto</span><span aria-hidden="true">·</span>
+          <span>UX Engineering</span><span aria-hidden="true">·</span>
+          <span>TypeScript</span><span aria-hidden="true">·</span>
+          <span>React</span><span aria-hidden="true">·</span>
+          <span>Next.js</span><span aria-hidden="true">·</span>
+          <span>Node.js</span><span aria-hidden="true">·</span>
+          <span>PostgreSQL</span><span aria-hidden="true">·</span>
+          <span>Diseño de Producto</span><span aria-hidden="true">·</span>
+          <span>UX Engineering</span><span aria-hidden="true">·</span>
+        </div>
+      </section>
+
+      <!-- SOBRE MÍ -->
+      <section id="sobre-mi" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-num">01</span>
+            <h2 class="section-title">Sobre mí</h2>
+          </div>
+          <div class="about-grid">
+            <div class="about-text reveal">
+              <p class="about-lead">
+                Soy <strong>Aaron Gonzalez</strong>, desarrollador full-stack
+                con base en Buenos Aires. Firmo mi trabajo como
+                <em>2BleA</em>, mi marca personal y la huella que dejo en
+                cada producto que construyo.
+              </p>
+              <p>
+                Empecé escribiendo HTML a los catorce años. Hoy lidero
+                proyectos completos: desde la primera conversación con el
+                cliente hasta el despliegue. Me importa el código, pero me
+                importa más el problema que resuelve.
+              </p>
+              <p>
+                Trabajo con equipos pequeños donde cada decisión cuenta.
+                Cuando no estoy programando, leo, corro y escribo notas
+                que casi nadie va a ver.
+              </p>
+
+              <div class="brand-block">
+                <div class="brand-mark">
+                  <span>2</span><span class="brand-accent">B</span><span>leA</span>
+                </div>
+                <div class="brand-text">
+                  <span class="brand-label">Sobre la marca</span>
+                  <p>
+                    <strong>2BleA</strong> nació como un guiño a mis dos
+                    iniciales — la <em>A</em> doble — y se transformó en
+                    mi forma de presentar el trabajo: <em>doble esfuerzo,
+                    doble cuidado, una sola firma</em>. Es el sello que
+                    encontrás en todo lo que entrego.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="about-side reveal">
+              <div class="avatar-card">
+                <div class="avatar">
+                  <!-- Reemplazá /avatar.jpg con tu foto (recomendado: 480x480 px, formato cuadrado) -->
+                  <img src="/avatar.jpg" alt="Foto de Aaron Gonzalez" loading="lazy" onerror="this.parentElement.classList.add('no-image'); this.remove();" />
+                  <span class="avatar-fallback" aria-hidden="true">AG</span>
+                  <span class="avatar-status" aria-hidden="true"></span>
+                </div>
+                <div class="avatar-meta">
+                  <span class="avatar-name">Aaron Gonzalez</span>
+                  <span class="avatar-role">Founder · 2BleA</span>
+                </div>
+              </div>
+
+              <div class="skills">
+                <h3 class="skills-title">Stack actual</h3>
+                <ul class="skills-list">
+                  <li data-cursor="hover">TypeScript</li>
+                  <li data-cursor="hover">React</li>
+                  <li data-cursor="hover">Next.js</li>
+                  <li data-cursor="hover">Node.js</li>
+                  <li data-cursor="hover">PostgreSQL</li>
+                  <li data-cursor="hover">Tailwind</li>
+                  <li data-cursor="hover">Figma</li>
+                  <li data-cursor="hover">AWS</li>
+                  <li data-cursor="hover">Drizzle</li>
+                  <li data-cursor="hover">Vite</li>
+                </ul>
+              </div>
+              <div class="info-card">
+                <div class="info-row">
+                  <span class="info-label">Ubicación</span>
+                  <span class="info-value">Buenos Aires, AR</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Idiomas</span>
+                  <span class="info-value">ES · EN · PT</span>
+                </div>
+                <div class="info-row">
+                  <span class="info-label">Estado</span>
+                  <span class="info-value info-value-active">
+                    <span class="info-dot"></span> Disponible
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS -->
+      <section id="servicios" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-num">02</span>
+            <h2 class="section-title">Servicios</h2>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card reveal" data-cursor="hover">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3 class="service-title">Desarrollo Web</h3>
+              <p class="service-desc">
+                Sitios y aplicaciones a medida con React, Next.js y TypeScript.
+                Código mantenible, arquitectura sólida y rendimiento de primera.
+              </p>
+              <ul class="service-tags">
+                <li>SPA</li><li>SSR</li><li>API REST</li><li>WebSockets</li>
+              </ul>
+            </article>
+
+            <article class="service-card reveal" data-cursor="hover">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <h3 class="service-title">Diseño de Producto</h3>
+              <p class="service-desc">
+                De wireframe a interfaz pulida. Trabajo con sistemas de
+                diseño escalables y prototipos en Figma listos para implementar.
+              </p>
+              <ul class="service-tags">
+                <li>UI/UX</li><li>Design Systems</li><li>Prototipado</li>
+              </ul>
+            </article>
+
+            <article class="service-card reveal" data-cursor="hover">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3 class="service-title">Backend & APIs</h3>
+              <p class="service-desc">
+                APIs robustas con Node.js, autenticación, bases de datos
+                y despliegues automatizados en la nube. Pensado para escalar.
+              </p>
+              <ul class="service-tags">
+                <li>Node.js</li><li>PostgreSQL</li><li>Auth</li><li>CI/CD</li>
+              </ul>
+            </article>
+
+            <article class="service-card reveal" data-cursor="hover">
+              <div class="service-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h3 class="service-title">Consultoría Técnica</h3>
+              <p class="service-desc">
+                Acompañamiento a equipos de producto: arquitectura,
+                code reviews, mejoras de performance y mentoría a desarrolladores.
+              </p>
+              <ul class="service-tags">
+                <li>Architecture</li><li>Code Review</li><li>Mentoring</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCIA / TIMELINE -->
+      <section id="experiencia" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-num">03</span>
+            <h2 class="section-title">Trayectoria</h2>
+          </div>
+
+          <ol class="timeline">
+            <li class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-meta">
+                <span class="timeline-year">2024 — Hoy</span>
+                <span class="timeline-place">Freelance</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Desarrollador Full-Stack independiente</h3>
+                <p>
+                  Diseño y construcción de productos digitales para startups
+                  de Latinoamérica y Europa. Desde MVPs hasta plataformas
+                  con miles de usuarios activos.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-meta">
+                <span class="timeline-year">2022 — 2024</span>
+                <span class="timeline-place">Northwave Studio</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Tech Lead</h3>
+                <p>
+                  Lideré un equipo de cinco desarrolladores. Definí la
+                  arquitectura del producto principal y migré la stack
+                  completa a TypeScript reduciendo bugs en producción
+                  un 60%.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-meta">
+                <span class="timeline-year">2020 — 2022</span>
+                <span class="timeline-place">Bloque Studio</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Desarrollador Frontend Senior</h3>
+                <p>
+                  Construí interfaces para clientes de e-commerce y SaaS.
+                  Diseñé el sistema de componentes interno que aún se usa
+                  en todos los proyectos de la agencia.
+                </p>
+              </div>
+            </li>
+
+            <li class="timeline-item reveal">
+              <div class="timeline-marker"></div>
+              <div class="timeline-meta">
+                <span class="timeline-year">2019 — 2020</span>
+                <span class="timeline-place">Punto Mov</span>
+              </div>
+              <div class="timeline-content">
+                <h3>Desarrollador Frontend</h3>
+                <p>
+                  Mi primer trabajo profesional. Aprendí a trabajar en
+                  equipo, a escribir código que otros leen y a no
+                  enamorarme de mi propia primera idea.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- PROYECTOS -->
+      <section id="proyectos" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-num">04</span>
+            <h2 class="section-title">Proyectos seleccionados</h2>
+          </div>
+
+          <div class="projects-grid" id="projectsGrid">
+            <a class="project-card reveal" href="#" target="_blank" rel="noopener noreferrer" data-cursor="hover" aria-label="Ver caso de Lumen Notes">
+              <div class="project-card-inner">
+                <div class="project-header">
+                  <span class="project-index">/01</span>
+                  <span class="project-year">2025</span>
+                </div>
+                <h3 class="project-title">Lumen Notes</h3>
+                <p class="project-desc">
+                  Aplicación de notas con sincronización en tiempo real,
+                  búsqueda difusa y editor enriquecido. Pensada para
+                  escritores que valoran la velocidad por encima de todo.
+                </p>
+                <ul class="tech-list">
+                  <li>React</li><li>TypeScript</li><li>Postgres</li><li>WebSockets</li>
+                </ul>
+                <div class="project-link">
+                  <span>Ver caso</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-card reveal" href="#" target="_blank" rel="noopener noreferrer" data-cursor="hover" aria-label="Ver caso de Orbit Analytics">
+              <div class="project-card-inner">
+                <div class="project-header">
+                  <span class="project-index">/02</span>
+                  <span class="project-year">2024</span>
+                </div>
+                <h3 class="project-title">Orbit Analytics</h3>
+                <p class="project-desc">
+                  Panel de métricas para equipos de producto. Gráficos
+                  interactivos, segmentación de usuarios y reportes
+                  programados con foco obsesivo en el rendimiento.
+                </p>
+                <ul class="tech-list">
+                  <li>Next.js</li><li>D3.js</li><li>Node.js</li><li>Redis</li>
+                </ul>
+                <div class="project-link">
+                  <span>Ver caso</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-card reveal" href="#" target="_blank" rel="noopener noreferrer" data-cursor="hover" aria-label="Ver caso de Cobalt Commerce">
+              <div class="project-card-inner">
+                <div class="project-header">
+                  <span class="project-index">/03</span>
+                  <span class="project-year">2024</span>
+                </div>
+                <h3 class="project-title">Cobalt Commerce</h3>
+                <p class="project-desc">
+                  Tienda online headless construida sobre una API
+                  personalizada. Carga inicial bajo 200ms, checkout de
+                  un solo paso y un panel de admin que se disfruta usar.
+                </p>
+                <ul class="tech-list">
+                  <li>Astro</li><li>Stripe</li><li>Supabase</li><li>Tailwind</li>
+                </ul>
+                <div class="project-link">
+                  <span>Ver caso</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </div>
+              </div>
+            </a>
+
+            <a class="project-card reveal" href="#" target="_blank" rel="noopener noreferrer" data-cursor="hover" aria-label="Ver caso de Pulse Habits">
+              <div class="project-card-inner">
+                <div class="project-header">
+                  <span class="project-index">/04</span>
+                  <span class="project-year">2023</span>
+                </div>
+                <h3 class="project-title">Pulse Habits</h3>
+                <p class="project-desc">
+                  App móvil minimalista para construir hábitos. Sin
+                  notificaciones agresivas, sin gamificación barata.
+                  Solo una racha y la promesa de aparecer mañana.
+                </p>
+                <ul class="tech-list">
+                  <li>React Native</li><li>Expo</li><li>SQLite</li>
+                </ul>
+                <div class="project-link">
+                  <span>Ver caso</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIOS -->
+      <section id="testimonios" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-num">05</span>
+            <h2 class="section-title">Lo que dicen</h2>
+          </div>
+
+          <div class="testimonials-grid">
+            <figure class="testimonial reveal">
+              <svg class="quote-mark" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.13 9.16a3.86 3.86 0 1 0 0 7.72 3.86 3.86 0 0 0 3.74-2.83C13.43 11.85 12.4 8 8.7 5l-1.4 1.4c1.94 1.6 3 3.4 3.3 5.16a3.86 3.86 0 0 0-1.47-.4zm10 0a3.86 3.86 0 1 0 0 7.72 3.86 3.86 0 0 0 3.74-2.83C23.43 11.85 22.4 8 18.7 5l-1.4 1.4c1.94 1.6 3 3.4 3.3 5.16a3.86 3.86 0 0 0-1.47-.4z"/></svg>
+              <blockquote>
+                Aaron entendió el problema antes que nosotros mismos.
+                Entregó un producto que parecía imposible para el plazo
+                que teníamos.
+              </blockquote>
+              <figcaption>
+                <span class="testimonial-name">María Cordero</span>
+                <span class="testimonial-role">CPO · Northwave Studio</span>
+              </figcaption>
+            </figure>
+
+            <figure class="testimonial reveal">
+              <svg class="quote-mark" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.13 9.16a3.86 3.86 0 1 0 0 7.72 3.86 3.86 0 0 0 3.74-2.83C13.43 11.85 12.4 8 8.7 5l-1.4 1.4c1.94 1.6 3 3.4 3.3 5.16a3.86 3.86 0 0 0-1.47-.4zm10 0a3.86 3.86 0 1 0 0 7.72 3.86 3.86 0 0 0 3.74-2.83C23.43 11.85 22.4 8 18.7 5l-1.4 1.4c1.94 1.6 3 3.4 3.3 5.16a3.86 3.86 0 0 0-1.47-.4z"/></svg>
+              <blockquote>
+                Trabajar con él es como trabajar con alguien que ya
+                vivió el resultado final. Cuida cada detalle sin
+                perderse en lo accesorio.
+              </blockquote>
+              <figcaption>
+                <span class="testimonial-name">Tomás Bravo</span>
+                <span class="testimonial-role">Founder · Lumen</span>
+              </figcaption>
+            </figure>
+
+            <figure class="testimonial reveal">
+              <svg class="quote-mark" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.13 9.16a3.86 3.86 0 1 0 0 7.72 3.86 3.86 0 0 0 3.74-2.83C13.43 11.85 12.4 8 8.7 5l-1.4 1.4c1.94 1.6 3 3.4 3.3 5.16a3.86 3.86 0 0 0-1.47-.4zm10 0a3.86 3.86 0 1 0 0 7.72 3.86 3.86 0 0 0 3.74-2.83C23.43 11.85 22.4 8 18.7 5l-1.4 1.4c1.94 1.6 3 3.4 3.3 5.16a3.86 3.86 0 0 0-1.47-.4z"/></svg>
+              <blockquote>
+                La diferencia entre un buen freelancer y Aaron es que
+                él se hace dueño del proyecto. Nunca pidió permiso para
+                hacer mejor las cosas.
+              </blockquote>
+              <figcaption>
+                <span class="testimonial-name">Lucía Pérez</span>
+                <span class="testimonial-role">Director · Bloque Studio</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-num">06</span>
+            <h2 class="section-title">Preguntas frecuentes</h2>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item reveal" data-cursor="hover">
+              <summary>
+                <span>¿Cómo trabajamos juntos?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-content">
+                <p>
+                  Empezamos con una llamada gratuita de 30 minutos para
+                  entender tu proyecto. Si tiene sentido, te envío una
+                  propuesta con alcance, plazos y precio cerrado. Sin
+                  sorpresas.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item reveal" data-cursor="hover">
+              <summary>
+                <span>¿Cuánto tarda un proyecto?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-content">
+                <p>
+                  Un MVP típico toma entre 4 y 8 semanas. Sitios
+                  institucionales, entre 2 y 4. Te doy una estimación
+                  realista en la propuesta inicial.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item reveal" data-cursor="hover">
+              <summary>
+                <span>¿Trabajás con clientes fuera de Argentina?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-content">
+                <p>
+                  Sí. Más de la mitad de mis clientes están en Europa
+                  o Estados Unidos. Trabajo en zonas horarias compatibles
+                  con UTC-5 a UTC+2.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item reveal" data-cursor="hover">
+              <summary>
+                <span>¿Qué incluye el precio?</span>
+                <span class="faq-icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-content">
+                <p>
+                  Diseño, desarrollo, despliegue y un mes de soporte
+                  post-lanzamiento. Si necesitás mantenimiento continuo,
+                  trabajamos con un retainer mensual.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section id="contacto" class="section section-contact">
+        <div class="container">
+          <div class="section-head reveal">
+            <span class="section-num">07</span>
+            <h2 class="section-title">Contacto</h2>
+          </div>
+
+          <div class="contact-card reveal">
+            <h3 class="contact-headline">
+              ¿Tenés una idea? <em class="serif">Hablemos.</em>
+            </h3>
+            <p class="contact-text">
+              Estoy abierto a colaboraciones, proyectos freelance y
+              oportunidades full-time. La mejor forma de empezar es por email.
+            </p>
+            <a href="mailto:hola@aarongonzalez.dev" class="contact-email" data-cursor="hover">
+              hola@aarongonzalez.dev
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+
+            <div class="socials">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" data-cursor="hover">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.16c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.27-1.69-1.27-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.69 1.24 3.34.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.27-5.24-5.66 0-1.25.45-2.27 1.18-3.07-.12-.29-.51-1.46.11-3.04 0 0 .96-.31 3.16 1.17a10.93 10.93 0 0 1 5.76 0c2.2-1.48 3.16-1.17 3.16-1.17.62 1.58.23 2.75.11 3.04.74.8 1.18 1.82 1.18 3.07 0 4.4-2.69 5.36-5.25 5.65.41.36.78 1.06.78 2.14v3.18c0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" data-cursor="hover">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.45v6.29zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter" data-cursor="hover">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>Twitter</span>
+              </a>
+              <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Dribbble" data-cursor="hover">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm9.95 11.32c-.13-.03-2.85-.58-5.6-.23-.06-.14-.12-.29-.18-.43-.17-.4-.36-.81-.55-1.21 3.06-1.25 4.45-3.05 4.47-3.07 1.18 1.43 1.86 3.07 1.86 4.94zM12 1.85c2.16 0 4.16.74 5.74 1.99-.02.03-1.27 1.71-4.21 2.83-1.36-2.5-2.86-4.55-3.09-4.86.5-.07 1.03-.11 1.56-.11.34 0 .67.01 1 .04zM7.81 2.6c.22.3 1.69 2.36 3.07 4.81-3.86 1.03-7.27 1.01-7.64 1A10.16 10.16 0 0 1 7.81 2.6zM2.04 12.04v-.31c.36.01 4.37.06 8.49-1.18.24.46.46.93.67 1.4-.11.03-.22.06-.32.09-4.26 1.38-6.51 5.13-6.7 5.45a10.13 10.13 0 0 1-2.14-5.45zm3.6 6.85c.14-.23 1.92-3.71 6.59-5.34l.05-.02c1.17 3.02 1.65 5.55 1.77 6.27a10.16 10.16 0 0 1-8.41-.91zm10.18-.07c-.08-.49-.52-2.91-1.61-5.89 2.59-.41 4.86.26 5.14.36a10.16 10.16 0 0 1-3.53 5.53z"/></svg>
+                <span>Dribbble</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <span class="footer-logo">2B</span>
+          <span>2BleA · Aaron Gonzalez · © <span id="year"></span></span>
+        </div>
+        <p class="footer-meta">
+          <span class="footer-status"><span class="info-dot"></span> En vivo</span>
+          <span>Diseñado y construido a mano</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
