@@ -2012,3 +2012,84 @@ ol {
     animation: none;
   }
 }
+
+
+
+.budget-head {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.budget-line {
+  width: 70px;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+
+.budget-title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.budget-text {
+  max-width: 620px;
+  margin: 0 auto;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.7;
+}
+
+.service-card-featured {
+  margin-top: 1rem;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  background: linear-gradient(
+    180deg,
+    rgba(167, 139, 250, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.service-card-featured::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at top right,
+    rgba(167, 139, 250, 0.18),
+    transparent 45%
+  );
+}
+
+.service-card-featured:hover {
+  transform: translateY(-6px);
+  border-color: rgba(196, 181, 253, 0.6);
+}
+
+.service-card-featured .project-link {
+  margin-top: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #c4b5fd;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.service-card-featured:hover .project-link {
+  gap: 0.8rem;
+  color: #ddd6fe;
+}
