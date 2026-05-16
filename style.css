@@ -1183,6 +1183,60 @@ ol {
   letter-spacing: 0.02em;
 }
 
+.service-card-featured {
+  position: relative;
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  background: linear-gradient(
+    180deg,
+    rgba(167, 139, 250, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
+}
+
+.service-card-featured::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at top right,
+    rgba(167, 139, 250, 0.18),
+    transparent 45%
+  );
+}
+
+.service-badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(167, 139, 250, 0.14);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  color: #c4b5fd;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.service-demo-link {
+  margin-top: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #c4b5fd;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.service-demo-link:hover {
+  gap: 0.8rem;
+  color: #ddd6fe;
+}
+
 /* ========== TIMELINE ========== */
 .timeline {
   position: relative;
