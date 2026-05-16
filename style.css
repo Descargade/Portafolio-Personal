@@ -2093,3 +2093,36 @@ ol {
   gap: 0.8rem;
   color: #ddd6fe;
 }
+
+.services-featured {
+  margin-top: 5rem;
+}
+
+.services-featured-head {
+  margin-bottom: 2rem;
+}
+
+.services-featured-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.services-featured-text {
+  max-width: 720px;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+.service-card-featured {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
+
+.service-card-featured .project-link {
+  margin-top: auto;
+}
